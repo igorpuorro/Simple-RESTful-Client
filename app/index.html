@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple RESTful Client</title>
+    <link rel="stylesheet" type="text/css" href="/app/app.css">
+    <link rel="icon" type="image/png" href="/assets/icons/icon16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/assets/icons/icon48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="/assets/icons/icon128.png" sizes="128x128">
+</head>
+
+<body>
+    <div class="container">
+        <div class="request-section">
+            <h2>Request</h2>
+
+            <div class="endpoint-section">
+                <h3>Endpoint</h3>
+                <label for="method">Method:</label>
+                <select id="method">
+                    <option value="CONNECT">CONNECT</option>
+                    <option value="DELETE">DELETE</option>
+                    <option value="GET">GET</option>
+                    <option value="HEAD">HEAD</option>
+                    <option value="OPTIONS">OPTIONS</option>
+                    <option value="PATCH">PATCH</option>
+                    <option value="POST">POST</option>
+                    <option value="PUT">PUT</option>
+                    <option value="TRACE">TRACE</option>
+                </select>
+                <label for="url">URL:</label>
+                <input type="text" id="url">
+            </div>
+
+            <div id="parameter-container">
+                <h3>Parameters</h3>
+                <div class="key-value-pair">
+                    <input type="text" class="key" name="key" placeholder="Key">
+                    <input type="text" class="value" name="value" placeholder="Value">
+                    <button class="load-button">Load from JSON</button>
+                </div>
+                <div class="key-value-pair">
+                    <input type="text" class="key" name="key" placeholder="Key">
+                    <input type="text" class="value" name="value" placeholder="Value">
+                    <button class="load-button">Load from JSON</button>
+                </div>
+            </div>
+            <button class="add-parameter-button">Add Parameter</button>
+            <button class="send-request-button">Send Request</button>
+        </div>
+
+        <div class="response-section">
+            <h2>Response</h2>
+            <pre id="response-content"></pre>
+        </div>
+    </div>
+    <script src="/app/app.js"></script>
+</body>
+
+</html>
